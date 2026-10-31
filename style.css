@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.8;
+}
+
+header {
+    background-color: #1e293b;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+nav ul {
+    list-style: none;
+    /*حذف نقطه لیست*/
+    display: flex;
+    /*چیدن آیتم ها کنار هم*/
+    justify-content: center;
+    /*وسطچین کردن منو*/
+    gap: 25px;
+    /*فاصله بین گزینه های منو*/
+    margin-bottom: 25px;
+}
+
+nav a {
+    color: #38bdf8;
+    text-decoration: none;
+    /*حذف خط زیر لینک*/
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffffff;
+    /*تغییر رنگ وقتی موس روی لینک می رود*/
+}
+
+/*استایل بخش های اصلی(کارت ها)*/
+main {
+    width: 100%;
+
+}
+
+.card,
+section {
+    background-color: #ffffff;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    color: #0f172a;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.roadmap-subtitle {
+    font-size: 13px;
+    color: #0284c7;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.roadmap-list {
+    list-style: none;
+    padding-left: 12px;
+    border-left: 2px solid #bae6fd;
+    /* خط عمودی آبی ملایم در سمت چپ مثل تایم‌لاین */
+}
+
+.roadmap-list li {
+    margin-bottom: 14px;
+}
+
+.roadmap-list strong {
+    display: block;
+    /* قرار گرفتن عنوان در یک خط مجزا */
+    font-size: 14px;
+    color: #0f172a;
+}
+
+.roadmap-list span {
+    display: block;
+    /* رفتن زیرشاخه‌ها به خط پایینِ عنوان */
+    font-size: 12px;
+    color: #64748b;
+    /* رنگ طوسی ملایم برای زیرشاخه‌ها */
+    line-height: 1.4;
+}
+
+h2 {
+    color: #0f172a;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+
+}
+
+.skill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    /*اگر جا کم بود برچسب های بعدی بروند خط پایین*/
+    column-gap: 12%;
+    row-gap: 14px;
+    margin-bottom: 30px;
+    /* فاصله گرفتن کل کپسول‌ها از تیتر بعدی*/
+    padding: 0px;
+}
+
+.skill-list li {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 6px 16px;
+    border-radius: 20px;
+    /* گرد کردن کامل گوشه‌ها به شکل کپسول */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    /* چیدن اجزای فرم زیر هم در یک ستون */
+    gap: 12px;
+    max-width: 700px;
+    /* جلوگیری از کشیده شدن فرم در کل عرض مانیتور */
+    margin: 40px auto;
+    /* وسط‌چین کردن باکس فرم در صفحه */
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    /* ارث‌بری فونت فارسی از تگ body */
+}
+
+button {
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    /* تبدیل نشانگر موس به شکل دست */
+    align-self: flex-start;
+    padding: 12px 30px;
+}
+
+button:hover {
+    background-color: #0369a1
+}
+
+.Layout_Container {
+    max-width: 1300px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    gap: 25px;
+    align-items: start;/
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* تبدیل عکس مربعی به دایره کامل */
+    object-fit: cover;
+    /* جلوگیری از کشیده یا له شدن تصویر داخل دایره */
+    display: block;
+    margin: 0 auto 15px auto;
+    /* وسط‌چین کردن عکس و فاصله از پایین */
+    border: 3px solid #38bdf8;
+    /* یک حلقه آبی ظریف دور عکس */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.Layout_Container {
+    /* ۱. تنظیمات شناور برای مانیتورهای عریض و استاندارد */
+    width: 92%;
+    /* همیشه ۹۲ درصد از عرض هر مانیتوری را می‌گیرد */
+    max-width: 1440px;
+    /* در مانیتورهای خیلی غول‌پیکر بیش از حد پخش نمی‌شود */
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) minmax(400px, 2.2fr) minmax(240px, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+/* هماهنگ کردن عرض بخش فرم تماس با ستون‌های بالایی در تمام مانیتورها */
+#contact,
+footer section {
+    width: 92%;
+    max-width: 1440px;
+    margin: 30px auto;
+    padding: 25px 40px;
+}
+
+/* ۲. واکنش‌گرا کردن اندازه فونت تیتر هدر متناسب با عرض مرورگر */
+header h1 {
+    font-size: clamp(24px, 3vw, 38px);
+    /* کوچک و بزرگ شدن هوشمند تیتر با تغییر عرض صفحه */
+}
+
+/* ۳. حالت لپ‌تاپ‌های کوچک و پنجره‌های نیمه‌باز وب (زیر ۱۱۵۰ پیکسل) */
+@media (max-width: 1150px) {
+    .Layout_Container {
+        grid-template-columns: 1fr 2fr;
+        /* تبدیل ۳ ستون به ۲ ستون */
+    }
+
+    /* ستون سوم (سمت راست) تمام عرض پایین را می‌گیرد تا به هم نریزد */
+    .Layout_Container>aside:last-child {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+}
+
+/* ۴. حالت تبلت و موبایل (زیر ۷۶۸ پیکسل) */
+@media (max-width: 768px) {
+    .Layout_Container {
+        width: 95%;
+        grid-template-columns: 1fr;
+        /* تبدیل کل صفحه به ۱ ستون */
+    }
+
+    .Layout_Container>aside:last-child {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        /* شکسته شدن منوی بالا اگر در صفحه کوچک جا نشد */
+        gap: 15px;
+    }
+}
+    /* کادر کلی بخش پروژه‌ها هم‌عرض با ۳ ستون بالایی */
+    .projects-section {
+        width: 92%;
+        max-width: 1440px;
+        margin: 0 auto 30px auto;
+    }
+
+    /* چیدن کارت‌های پروژه کنار هم در ۳ ستون مساوی */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .project-card {
+        background-color: #f8fafc;
+        border-left: 4px solid #38bdf8;
+        padding: 18px;
+        border-radius: 8px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .project-card h4 {
+        color: #0f172a;
+        margin-bottom: 8px;
+    }
+
+    .project-card p {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .tech-tag {
+        display: inline-block;
+        background-color: #e0f2fe;
+        color: #0369a1;
+        font-size: 12px;
+        padding: 4px 10px;
+        border-radius: 12px;
+        margin-right: 6px;
+        font-weight: bold;
+    }
+
+    #contact,
+    footer section {
+        width: 95%;
+        padding: 20px;
+    }
+}
