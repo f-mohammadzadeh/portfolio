@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My Portfolio </title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <ul>
+                <li><a href="#about"> About Me </a></li>
+                <li><a href="#skills"> My Skills </a></li>
+            </ul>
+        </nav>
+        <h1> Fatemeh Mohammadzadeh </h1>
+        <p> Python Developer | Aspiring AI Engineer </p>
+
+    </header>
+
+    <div class="Layout_Container"> <!-- این div هر سه ستون چپ، وسط و راست را کنار هم نگه می‌دارد -->
+        <aside class="sidebar">
+            <div class="card Profile-card">
+                <img src="/static/Profile.jpeg" alt="Fatemeh Mohammadzadeh" class="profile-img" width="200"
+                    height="200">
+                <h3>Profile Info</h3>
+                <p><strong>Role:</strong>Junior Python Developer</p>
+                <p><strong>Focus: </strong>AI & Machine Learning</p>
+                <p><strong>Status:</strong>Open To Work</p>
+                <p><strong>LinkedIn:</strong><a
+                        href="https://www.linkedin.com/in/fatemeh-mohammadzadeh-4505a7270">LinkedIn.com/Fatemeh</a></p>
+                <p><strong>Github:</strong><a href="https://github.com/f-mohammadzadeh">github.com/Fatemeh</a></p>
+            </div>
+
+            <div class="card">
+                <h3>Languages</h3>
+                <p>Persian (Native)</p>
+                <p>English (Professional)</p>
+            </div>
+
+            <div class="card">
+                <h3>Education</h3>
+                <p><strong>B.Sc. in Computer Engineering</strong></p>
+            </div>
+
+        </aside>
+
+
+
+        <main>
+            <section id="about">
+                <h2> About Me </h2>
+                <p> I'm a Python developer interested in Artificial Intelligence and Machine Learning.
+
+                    I enjoy learning new technologies, building practical projects, and exploring how software can solve
+                    real-world problems.
+
+                    Currently, I'm expanding my knowledge in programming, data analysis, and AI development, one project
+                    at a time.
+
+                    This portfolio is a collection of my learning journey, experiments, and projects.</p>
+            </section>
+
+            <section id="skills">
+                <h2> Programming</h2>
+                <ul class="skill-list">
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+
+                <h2>AI & Data</h2>
+                <ul class="skill-list">
+                    <li>Machine Learning</li>
+                    <li>Data Analysis</li>
+                </ul>
+
+                <h2>Other</h2>
+                <ul class="skill-list">
+                    <li>Software Testing</li>
+                    <li>Technical Documentation</li>
+                    <li>Troubleshooting</li>
+
+                </ul>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <div class="card">
+                <h3>My AI Engineer Roadmap</h3>
+                <p class="roadmap-subtitle">From Programming Foundations to Production AI</p>
+
+                <ul class="roadmap-list">
+                    <li>
+                        <strong>1. Programming Foundations</strong>
+                        <span>Python · OOP · Data Structures · Algorithms</span>
+                    </li>
+                    <li>
+                        <strong>2. Database & Version Control</strong>
+                        <span>SQL · PostgreSQL · Git · GitHub</span>
+                    </li>
+                    <li>
+                        <strong>3. Mathematics & Statistics</strong>
+                        <span>Linear Algebra · Probability · Statistics · Calculus</span>
+                    </li>
+                    <li>
+                        <strong>4. Data Analysis & Processing</strong>
+                        <span>NumPy · Pandas · Matplotlib · Data Visualization</span>
+                    </li>
+                    <li>
+                        <strong>5. Machine Learning</strong>
+                        <span>Scikit-learn · Supervised & Unsupervised Learning · Evaluation</span>
+                    </li>
+                    <li>
+                        <strong>6. Deep Learning</strong>
+                        <span>Neural Networks · PyTorch · TensorFlow</span>
+                    </li>
+                    <li>
+                        <strong>7. Natural Language Processing</strong>
+                        <span>NLP · Transformers · Hugging Face</span>
+                    </li>
+                    <li>
+                        <strong>8. Generative AI & LLMs</strong>
+                        <span>LLMs · Prompt Engineering · Embeddings · RAG · Fine-tuning</span>
+                    </li>
+                    <li>
+                        <strong>9. AI Application Development</strong>
+                        <span>FastAPI · Flask · REST APIs · Docker · AI Agents</span>
+                    </li>
+                    <li>
+                        <strong>10. Deployment & MLOps</strong>
+                        <span>Cloud Computing · Model Deployment · CI/CD · Model Monitoring</span>
+                    </li>
+                </ul>
+            </div>
+
+        </aside>
+    </div>
+
+    <!-- بخش جدید پروژه‌ها: بین ۳ ستون بالا و فوتر -->
+    <section id="projects" class="projects-section">
+        <h2>Projects & Practice</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <h4>Car Price Prediction</h4>
+                <p>Educational project using Python and Linear Regression to predict car prices from data.</p>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Machine Learning</span>
+            </div>
+
+            <div class="project-card">
+                <h4>Personal Portfolio Website (In Progress)</h4>
+                <p>A personal website built to showcase my skills, projects, and learning journey.</p>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            {%if success_message%}
+            <p style="background-color: #dcfce7; color: #166534; padding: 12px;
+             border-radius: 6px; text-align: center; font-weight: bold;">
+                {{success_message}}
+            </p>
+            {%endif%}
+
+            <form action="{{ url_for('contact') }}" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="@gmail.com" required>
+                <label for="message">Message</label>
+                <textarea type="text" id="message" name="message" placeholder="type your message" required></textarea>
+                <button type="submit">Send message</button>
+
+            </form>
+
+        </section>
+    </footer>
+</body>
+
+</html>
